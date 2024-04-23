@@ -19,7 +19,7 @@ for col in combined_df.columns:
         try:
             combined_df[col] = pd.to_numeric(combined_df[col])
         except ValueError:
-            pass  # Якщо не вдається змінити тип, пропускаємо
+            pass
 
 # Видалення останнього рядка
 combined_df.drop(combined_df.index[-1], inplace=True)
